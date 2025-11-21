@@ -1,0 +1,21 @@
+.over-ons{
+    margin-bottom: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+#titel-ons{
+    font-weight:lighter;
+}
+
+
+.onze-kappers{
+    display: flex;
+    justify-content: auto;
+    align-items: auto;
+}
+#quote{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 60px;
+    
+}
