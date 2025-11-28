@@ -1,0 +1,93 @@
+.custom-navbar {
+    background-color: #111;               
+    padding: 12px 20px;
+    font-family: "Poppins", sans-serif;
+    border-bottom: 2px solid #bfa046;     
+}
+
+/* Logo image */
+.logo {
+    height: 42px;
+}
+
+/* Brand text */
+.navbar-brand {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #bfa046 !important;            
+}
+
+.navbar-brand:hover {
+    color: #d4b768 !important;
+}
+
+/* Nav links */
+.nav-link {
+    color: #ddd !important;
+    font-size: 1rem;
+    padding: 10px 14px !important;
+    transition: 0.25s;
+}
+
+.nav-link:hover {
+    color: #bfa046 !important;
+    text-shadow: 0 0 6px rgba(191,160,70,0.6);
+}
+
+/* Cart button */
+.cart-btn {
+    background: none;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    color: white;
+    transition: 0.25s;
+    size: 40xp;
+}
+
+.cart-btn:hover {
+    color: #bfa046;
+}
+
+/* Cart badge */
+#cartCount {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #bfa046;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 0.85rem;
+    padding: 2px 7px;
+    min-width: 22px;
+    text-align: center;
+}
+
+/* Reservation button */
+.reservation {
+    background: #bfa046;
+    color: #111;
+    font-weight: 600;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.reservation:hover {
+    background: #d4b768;
+}
+
+/* Mobile dropdown behaviour */
+@media (max-width: 576px) {
+    #navLinks {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        padding: 12px;
+        border-top: 1px solid #bfa046;
+    }
+    #navLinks.show {
+        display: flex;
+    }
+}
