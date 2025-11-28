@@ -1,12 +1,33 @@
+#body{
+    background-color: white;
+}
+
+.txt{
+    color: black
+}
+
 .over-ons{
     margin-bottom: 60px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
-#titel-ons{
+#title-ons{
     font-weight:lighter;
-}
 
+
+}
+.ons-img{
+    display: flex;
+    flex-direction: row;
+}
+#knipImg{
+    width: 350px;
+    height: 350px;
+}
+#alceholImg{
+    width: 350px;
+    height: 350px;
+}
 
 .onze-kappers{
     display: flex;
