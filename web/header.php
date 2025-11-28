@@ -6,7 +6,7 @@
 <nav class="navbar navbar-expand-lg custom-navbar">
   <div class="container-fluid">
     <a class="navbar-brand d-flex align-items-center" href="homepage.php">
-      <img src="../assets/logo.png" alt="logo" class="logo me-2"/>
+      <img src="../assets/Untitled design.png" alt="logo" class="logo me-2"/>
       Tappers & Trimmers
     </a>
      <ul class="nav-links navbar-nav ms-auto" id="navLinks">

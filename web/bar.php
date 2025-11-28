@@ -12,17 +12,6 @@
 
 
 </head>
-<header div class="header">
-    <h1 div class="logo">Kappers & trimmers</h1>
-    <nav class="navigatieMenu">
-        <nav>
-            <a href="homepage.html">Home</a>
-            <a href="overOns.html">Over ons</a>
-            <a href="diensten.html">Diensten</a>
-            <a href="afspraakMaken.html">Afspraak maken</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-</header>
 <body class="body">
     <!-- fotos voor de homepage -->
      <div class="afbeeldingHome">
@@ -38,7 +27,9 @@
 
 
 
-
+<?php
+    include("footer.php");
+    ?>
 
 </body>
 </html>
