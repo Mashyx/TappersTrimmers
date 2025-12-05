@@ -40,10 +40,15 @@
     margin-left: 15px;
 }
 
+
 .onze-kappers{
     display: flex;
     justify-content: auto;
     align-items: auto;
+    
+}
+.img-barbers{
+    margin-right: 50px;
 }
 #quote{
     color: #bfa046;

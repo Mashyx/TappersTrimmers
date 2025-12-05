@@ -30,15 +30,19 @@
     </div>
     <h1 id="kappers-intro" >Over onze kappers </h1>
     <div class="onze-kappers">
-        <img src="../assets/barber1.jpg" height="200" with="200">
+        <img src="../assets/barber1.jpg" height="200" with="200" id="barber1" class="img-barbers">
         <p class="txt">dit is Norman Beekman.<br>
-        Hij is 43 jaar oud en is kapper sinds zijn 21ste. 
-        Hij doet bij ons het meeste knippen</p>
-        <img src="../assets/berber2.jpg" height="200" with="200">
-        <p class="txt">dit is .... hij is heel goed in ... en wat persoonlijke informatie 
-        en wat verder wat hij doet in dit bedrijf</p>
-        <img src="../assets/barber3.jpg" height="200" with="200">
-        <p class="txt">dit is Giel Bakker </p>
+        Hij is 43 jaar oud en is kapper sinds zijn 21ste. <br>
+        Bij ons werkt hij al 9 bijna 10 jaar en zijn specialisatie is op baarden.</p>
+        <img src="../assets/barber3.jpg" height="200" with="200" id="barber3" class="img-barbers">
+        <p class="txt">dit is Giel Bakker<br>
+        Hij is 29 jaar oud en is nu 5 jaar kapper. 
+        bij ons werkt hij nu 3 jaar en is gespecialiseerd in het knippen van je hoofdhaar.</p>
+        <img src="../assets/berber2.jpg" height="200" with="200" id="barber2" class="img-barbers">
+        <p class="txt">dit is Harm Pieterson <br>
+        Hij is 24 en is nu 2 jaar kapper.
+        bij ons werkt hij nu 1 jaar en is gespecialiseerd in het knippen van kinderen.
+        </p>
     </div>
     <h1 id="quote" class="txt">Ik ben er geknipt voor</h1>
 
