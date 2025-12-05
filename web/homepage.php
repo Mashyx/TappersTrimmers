@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home pagina</title>
+</head>
+<body class="body">
     <?php
     include("header.php");
     ?>
-</head>
-<body>
      <!-- fotos voor de homepage -->
     <div class="afbeeldingHome">
         <img src="../assets/pngtree-barbershop-with-chairs-in-traditional-styles-and-mirrors-in-front-picture-image_3372710.jpg" width = "900" height = "400">
@@ -22,8 +22,9 @@
     <!-- fotos voor de homepage -->
 
 
-    <?php
-    include("footer.php");
-    ?>
+        <?php
+        include("footer.php");
+        ?>
+
 </body>
 </html>
