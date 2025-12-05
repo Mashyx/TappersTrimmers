@@ -24,10 +24,7 @@
 </div>
     <!-- fotos voor de homepage -->
 
-
-
-
-<?php
+    <?php
     include("footer.php");
     ?>
 

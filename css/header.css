@@ -43,6 +43,7 @@
     color: white;
     transition: 0.25s;
     size: 40xp;
+    margin-right: 10px;
 }
 
 .cart-btn:hover {
@@ -61,6 +62,30 @@
     padding: 2px 7px;
     min-width: 22px;
     text-align: center;
+}
+
+/* Login button */
+.login-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background: #111;
+    border: 1px solid #bfa046;
+    border-radius: 50%;
+    color: #ddd;
+    font-size: 1.25rem;
+    transition: 0.3s;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 20xp;
+}
+
+.login-btn:hover {
+    color: #111;
+    background: #bfa046;
+    box-shadow: 0 0 8px rgba(191,160,70,0.5);
 }
 
 /* Reservation button */
@@ -91,3 +116,5 @@
         display: flex;
     }
 }
+
+

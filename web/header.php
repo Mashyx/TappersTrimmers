@@ -21,6 +21,9 @@
                         <span id="cartCount">0</span>
                     </button>
                 </a>
+                <a href="login.php" class="login-btn">
+                  <i class="bi bi-person"></i>
+                </a>
                 <button class="reservation ms-2" onclick="location.href='reservation.php'">Reserveren</button>
             </li>
         </ul>
