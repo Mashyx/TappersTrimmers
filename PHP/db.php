@@ -1,17 +1,18 @@
 <?php
-// Start the session
-session_start();
 
-// Database connection
-$host = 'localhost';
-$db   = 't&t';
-$user = 'root';
-$pass = ''; 
-$conn = new mysqli($host, $user, $pass, $db);
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "t&t";
 
-// Check connection
+
+$conn = new mysqli($servername, $username, $password, $database);
+
+
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+die("Verbinding mislukt: " . $conn->connect_error);
 }
+echo "Verbinding succesvol!";
+
 ?>
 
