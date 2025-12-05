@@ -21,9 +21,12 @@
             Wij knippen kinderen en mannen. Onze profesionals zijn ook constant op de hoogt over 
             de nieuwste sylen en kunne die toepassen.
             Als U wilt kunt u na uw knip beurt even blijven voor een borel en gezeligheid. <br>
-        <img src="../assets/barbershopKnip.jpg" height="300" with="500" id="knipImg" class="ons-img">
-        <img src="../assets/barbersshopAclehol-2.jpg" height="300" with="500" id="alceholImg"class="ons-img">
         </p>
+    </div>
+    <div class="ons-img">
+        <img src="../assets/barbershopKnip.jpg" height="300" with="500" id="knipImg" >
+        <img src="../assets/barbersshopAclehol-2.jpg" height="300" with="500" id="alceholImg">
+    
     </div>
     
     <div class="onze-kappers">
