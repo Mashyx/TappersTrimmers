@@ -1,0 +1,44 @@
+#body{
+    background-color: rgb(49, 44, 44);
+}
+
+.txt{
+    color:  rgb(218, 218, 218);
+}
+
+.over-ons{
+    margin-bottom: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+#title-ons{
+    font-weight:lighter;
+
+
+}
+.ons-img{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+#knipImg{
+    width: 350px;
+    height: 350px;
+}
+#alceholImg{
+    width: 350px;
+    height: 350px;
+}
+
+.onze-kappers{
+    display: flex;
+    justify-content: auto;
+    align-items: auto;
+}
+#quote{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 60px;
+    
+}
