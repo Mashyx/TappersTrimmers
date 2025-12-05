@@ -6,7 +6,6 @@
     text-decoration: none;
     outline: none;
     font-family: 'Poppins', sans-serif;
-    background-color: #000000;
 }
 
 html, body {
@@ -117,4 +116,60 @@ footer {
 .prijslijst .price {
     color: #bfa046;
     font-weight: 600;
+}
+
+.afbeeldingHome.hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    width: 100%;
+    padding: 30px 5%;
+}
+
+.hero-left {
+    flex: 1 1 60%;
+    text-align: left;
+    color: #fff;
+}
+
+.site-title {
+    font-size: 2.2rem;
+    color: #bfa046;
+    margin: 0 0 8px 0;
+}
+
+.lead {
+    font-size: 1rem;
+    color: #ddd;
+    margin: 0;
+    max-width: 700px;
+}
+
+.hero-right {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-wrap {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #bfa046;
+    background-color: #fff;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 768px) {
+    .logo-wrap { width: 140px; height: 140px; }
+}
+
+.title{
+    font-size: large;
+    min-height: auto;
 }
