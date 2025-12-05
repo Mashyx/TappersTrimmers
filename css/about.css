@@ -3,7 +3,7 @@
 }
 
 .txt{
-    color: #bfa046;
+    color: white;
 }
 
 .over-ons{
@@ -14,8 +14,12 @@
 }
 #title-ons{
     font-weight:lighter;
-
-
+    color: #bfa046;
+    
+}
+#kappers-intro{
+    font-weight:lighter;
+    color: #bfa046;
 }
 .ons-img{
     display: flex;
@@ -28,12 +32,12 @@
 #knipImg{
     width: 500px;
     height: 350px;
-    margin-right: 100px;   
+    margin-right: 15px;   
 }
 #alceholImg{
     width: 500px;
     height: 350px;
-    margin-left: 100px;
+    margin-left: 15px;
 }
 
 .onze-kappers{
@@ -42,8 +46,10 @@
     align-items: auto;
 }
 #quote{
+    color: #bfa046;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     font-size: 60px;
+    margin-top: 60px;
     
 }

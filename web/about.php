@@ -26,19 +26,19 @@
     <div class="ons-img">
         <img src="../assets/barbershopKnip.jpg" height="300" with="500" id="knipImg" >
         <img src="../assets/barbersshopAclehol-2.jpg" height="300" with="500" id="alceholImg">
-    
+
     </div>
-    
+    <h1 id="kappers-intro" >Over onze kappers </h1>
     <div class="onze-kappers">
-        <img src="../assets/kapper 1.jpg" height="200" with="200">
+        <img src="../assets/barber1.jpg" height="200" with="200">
+        <p class="txt">dit is Norman Beekman.<br>
+        Hij is 43 jaar oud en is kapper sinds zijn 21ste. 
+        Hij doet bij ons het meeste knippen</p>
+        <img src="../assets/berber2.jpg" height="200" with="200">
         <p class="txt">dit is .... hij is heel goed in ... en wat persoonlijke informatie 
         en wat verder wat hij doet in dit bedrijf</p>
-        <img src="../assets/kapper 1.jpg" height="200" with="200">
-        <p class="txt">dit is .... hij is heel goed in ... en wat persoonlijke informatie 
-        en wat verder wat hij doet in dit bedrijf</p>
-        <img src="../assets/kapper 1.jpg" height="200" with="200">
-        <p class="txt">dit is .... hij is heel goed in ... en wat persoonlijke informatie 
-        en wat verder wat hij doet in dit bedrijf</p>
+        <img src="../assets/barber3.jpg" height="200" with="200">
+        <p class="txt">dit is Giel Bakker </p>
     </div>
     <h1 id="quote" class="txt">Ik ben er geknipt voor</h1>
 
