@@ -1,6 +1,7 @@
+<link href="../css/style.css" rel="stylesheet">
 <link href="../css/bootstrap.min.css" rel="stylesheet">
 <link href="../css/footer.css" rel="stylesheet">
-<footer class="custom-footer mt-5">
+<footer class="custom-footer">
     <div class="container py-4">
         <div class="row text-white">
 
@@ -46,4 +47,3 @@
         <p>&copy; <?php echo date("Y"); ?> Tappers & Trippers. Alle rechten voorbehouden.</p>
     </div>
 </footer>
-
