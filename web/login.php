@@ -48,10 +48,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body { background-color: #1a1a1a; color: #eee; font-family: "Poppins", sans-serif; }
-        .login-card { background: #111; border: 1px solid #bfa046; padding: 35px; border-radius: 12px; box-shadow: 0 0 15px rgba(191,160,70,0.2); }
-        .form-label { color: #ddd; font-weight: 500; }
-        .form-control { background-color: #222; border: 1px solid #555; color: #fff; padding: 10px; }
+        body { 
+            background-color: #1a1a1a; 
+            color: #eee; 
+            font-family: "Poppins", sans-serif; 
+        }
+
+        .login-card { background: #111; 
+            border: 1px solid #bfa046; 
+            padding: 35px; 
+            border-radius: 12px; 
+            box-shadow: 0 0 15px rgba(191,160,70,0.2); 
+        }
+
+        .form-label { 
+            color: #ddd; 
+            font-weight: 500; 
+        }
+        .form-control { 
+            background-color: #222;
+            border: 1px solid #555;
+            color: #fff;
+            padding: 10px;
+            caret-color: #bfa046;
+        }
         .form-control:focus { border-color: #bfa046; box-shadow: 0 0 8px rgba(191,160,70,0.4); color: #fff; }
         .btn-gold { background: #bfa046; color: #111; font-weight: 600; border: none; padding: 10px 16px; border-radius: 6px; width: 100%; }
         .btn-gold:hover { background: #d4b768; }
@@ -67,10 +87,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 <?php if(!empty($error)) { echo "<div class='alert alert-danger'>$error</div>"; } ?>
 
-                <form action="login.php" method="POST">
+                <form action="login.php" method="POST" autocomplete="off">
                     <div class="mb-3">
                         <label class="form-label">E-mail</label>
-                        <input type="email" name="email" class="form-control" required>
+                        <input type="email" name="email" class="form-control" autocomplete="off" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Wachtwoord</label>
