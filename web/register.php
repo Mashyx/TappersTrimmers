@@ -1,6 +1,9 @@
 <?php
 require '../PHP/db.php';
 
+$error = "";
+$success = "";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $first_name = $conn->real_escape_string($_POST["first_name"]);
@@ -8,19 +11,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email      = $conn->real_escape_string($_POST["email"]);
     $password   = $_POST["password"];
 
-    // Wachtwoord hashen
-    $password_hash = password_hash($password, PASSWORD_DEFAULT);
-
-    // Standaard rol instellen
-    $role = "user";
-
-    $sql = "INSERT INTO users (first_name, last_name, email, password_hash, role)
-            VALUES ('$first_name', '$last_name', '$email', '$password_hash', '$role')";
-
-    if ($conn->query($sql) === TRUE) {
-        echo "Registratie succesvol!";
+    // Password complexity: at least one uppercase, one number, one special character and length > 8
+    if (strlen($password) <= 8) {
+        $error = "Wachtwoord moet langer dan 8 tekens zijn.";
     } else {
-        echo "Er is een fout opgetreden: " . $conn->error;
+        $hasUpper = preg_match('/[A-Z]/', $password);
+        $hasNumber = preg_match('/[0-9]/', $password);
+        $hasSpecial = preg_match('/[\W_]/', $password);
+
+        if (!$hasUpper || !$hasNumber || !$hasSpecial) {
+            $error = "Wachtwoord moet minstens één hoofdletter, één nummer en één speciaal teken bevatten.";
+        } else {
+        // Wachtwoord hashen
+        $password_hash = password_hash($password, PASSWORD_DEFAULT);
+
+        // Standaard rol instellen
+        $role = "user";
+
+        $sql = "INSERT INTO users (first_name, last_name, email, password_hash, role)
+                VALUES ('$first_name', '$last_name', '$email', '$password_hash', '$role')";
+
+        if ($conn->query($sql) === TRUE) {
+            $success = "Registratie succesvol!";
+        } else {
+            $error = "Er is een fout opgetreden: " . $conn->error;
+        }
+    }
     }
 }
 ?>
@@ -108,6 +124,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="col-md-6">
             <div class="register-card">
                 <h3 class="text-center mb-4">Account Aanmaken</h3>
+
+                <?php if(!empty($error)) { echo "<div class='alert alert-danger'>$error</div>"; } elseif(!empty($success)) { echo "<div class='alert alert-success'>$success</div>"; } ?>
 
                 <!-- Dummy velden voor autofill -->
                 <form action="register.php" method="POST" autocomplete="off">

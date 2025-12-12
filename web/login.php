@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['role'] = $user['role'];
 
             // Redirect naar homepagina
-            header("Location: homepage.php");
+            header("Location: dashboard.php");
             exit;
         } else {
             $error = "Ongeldig wachtwoord.";
