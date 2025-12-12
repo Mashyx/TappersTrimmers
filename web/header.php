@@ -1,3 +1,10 @@
+<?php
+session_start();
+$isLoggedIn = isset($_SESSION['user_id']);
+$loginHref = $isLoggedIn ? 'dashboard.php' : 'register.php';
+
+?>
+
 <header>
 <link href="../css/bootstrap.min.css" rel="stylesheet">
 <link href="../css/header.css" rel="stylesheet">
@@ -21,6 +28,11 @@
                         <span id="cartCount">0</span>
                     </button>
                 </a>
+                <a href="<?php echo $loginHref; ?>" class="nav-link p-0 me-2">
+                  <button class="login-btn" id="loginBtn" <?php if ($isLoggedIn) echo 'style="background:#bfa046;color:#111;border-color:#bfa046;"'; ?> >
+                    <i class="bi bi-person-circle"></i>
+                  </button>
+                </a>
                 <button class="reservation ms-2" onclick="location.href='reservation.php'">Reserveren</button>
             </li>
         </ul>
@@ -28,3 +40,4 @@
   </div>
 </nav>
 </header>
+
