@@ -12,7 +12,7 @@
 <body>
      <!-- fotos voor de homepage -->
     <div class="afbeeldingHome">
-        <img src="../assets/Untitled design.png" alt="logo" class="logo me-2"/>
+        <img src="../assets/Untitled design.png" class="logo me-2"/>
         <p>Welkom bij onze kapperszaak! Wij bieden professionele knip- en trimdiensten voor mannen en kinderen vanaf 12 jaar!. Onze ervaren kappers zorgen ervoor dat je er altijd op je best uitziet. Kom langs voor een stijlvolle knipbeurt of een verzorgende trimbeurt. We kijken ernaar uit je te verwelkomen!</p>
     </div>
 
