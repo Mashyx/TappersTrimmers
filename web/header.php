@@ -13,8 +13,8 @@ $loginHref = $isLoggedIn ? 'dashboard.php' : 'register.php';
 <nav class="navbar navbar-expand-lg custom-navbar">
   <div class="container-fluid">
     <a class="navbar-brand d-flex align-items-center" href="homepage.php">
-      <img src="../assets/Untitled design.png" alt="logo" class="logo me-2"/>
-      Tappers & Trimmers
+      <img src="../assets/logodesign.png" alt="logo" class="logo me-2"/>
+    <p class="title">Tappers & Trimmers</p> 
     </a>
      <ul class="nav-links navbar-nav ms-auto" id="navLinks">
             <li class="nav-item"><a class="nav-link" href="homepage.php">Home</a></li>

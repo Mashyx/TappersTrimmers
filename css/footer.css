@@ -6,6 +6,8 @@
     line-height: 1.5;
     padding-top: 30px;
     padding-bottom: 20px;
+    width: 100%;
+    margin-top: auto;
 }
 
 .custom-footer h5 {
@@ -19,12 +21,14 @@
 .custom-footer p {
     color: #ddd;                         
     margin: 0;
+    background-color: transparent;
 }
 
 .custom-footer a {
     color: #ddd;
     text-decoration: none;
     transition: 0.25s;
+    background-color: transparent;
 }
 
 .custom-footer a:hover {
@@ -51,6 +55,14 @@
 
 .custom-footer .col-md-3 {
     margin-bottom: 20px;
+}
+
+.custom-footer .container {
+    background-color: transparent;
+}
+
+.custom-footer .row {
+    background-color: transparent;
 }
 
 @media (max-width: 992px) {
