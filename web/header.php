@@ -2,7 +2,7 @@
 session_start();
 $isLoggedIn = isset($_SESSION['user_id']);
 $loginHref = $isLoggedIn ? 'dashboard.php' : 'register.php';
-
+require_once '../php/db.php';
 ?>
 
 <header>
