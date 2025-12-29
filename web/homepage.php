@@ -31,23 +31,23 @@
         <ul>
             <li>
                 <span class="service">Standaard Knipbeurt</span>
-                <span class="price">€ 15,00</span>
+                <span class="price"><br>€ 15,00</span>
             </li>
             <li>
                 <span class="service">Knipbeurt + Baard Trim</span>
-                <span class="price">€ 20,00</span>
+                <span class="price"><br>€ 20,00</span>
             </li>
             <li>
                 <span class="service">Kinderknipbeurt (tot 12 jaar)</span>
-                <span class="price">€ 12,00</span>
+                <span class="price"><br>€ 12,00</span>
             </li>
             <li>
                 <span class="service">Baard Trim</span>
-                <span class="price">€ 8,00</span>
+                <span class="price"><br>€ 8,00</span>
             </li>
             <li>
                 <span class="service">Wash & Style</span>
-                <span class="price">€ 10,00</span>
+                <span class="price"><br>€ 10,00</span>
             </li>
         </ul>
     </div>
