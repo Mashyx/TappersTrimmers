@@ -1,10 +1,15 @@
 <?php
 include("../PHP/db.php"); // database verbinding
+session_start();
 
-// Standaard lege waarden
+// Standaard waarden
 $email = $firstname = $lastname = "";
 $user_id = null;
 $orderPlaced = false;
+$coupon_error = "";
+$coupon = null;
+$coupon_id = null;
+$discount = 0;
 
 // Haal ingelogde gebruiker op
 if(isset($_SESSION['user_id'])) {
@@ -22,13 +27,20 @@ if(isset($_SESSION['user_id'])) {
     $stmt->close();
 }
 
+// Bereken totaalprijs
+$total_price = 0;
+if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
+    foreach($_SESSION['cart'] as $key => $item) {
+        if($key === 'total_items') continue;
+        $total_price += $item['price'] * $item['quantity'];
+    }
+}
+
+$discounted_total = $total_price;
+
 // Verwerk formulier
 if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
-    if(isset($_SESSION['user_id'])) {
-        $user_id = $_SESSION['user_id'];
-    }
 
-    // Verzamel formuliergegevens
     $email = $_POST['email'];
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
@@ -38,37 +50,50 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION['cart']) && !empty($
     $city = $_POST['city'];
     $phone = $_POST['phone'];
     $payment_method = $_POST['payment_method'];
+    $coupon_code = isset($_POST['coupon_code']) ? trim($_POST['coupon_code']) : "";
 
-    // Bereken totaalprijs
-    $total_price = 0;
-    foreach($_SESSION['cart'] as $key => $item) {
-        if($key === 'total_items') continue;
-        $total_price += $item['price'] * $item['quantity'];
-    }
-
-    // Voeg order toe
-    $stmt = $conn->prepare("INSERT INTO orders (user_id, email, firstname, lastname, address, housenumber, zipcode, city, phone, payment_method, total_price, status, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'In behandeling', NOW())");
-    if(!$stmt) { die("Prepare mislukt: " . $conn->error); }
-    $stmt->bind_param("issssssssss", $user_id, $email, $firstname, $lastname, $address, $housenumber, $zipcode, $city, $phone, $payment_method, $total_price);
-    $stmt->execute();
-    $order_id = $stmt->insert_id;
-    $stmt->close();
-
-    // Voeg orderlines toe
-    foreach($_SESSION['cart'] as $key => $item) {
-        if($key === 'total_items') continue;
-        $stmt = $conn->prepare("INSERT INTO orderlines (order_id, product_id, quantity, price) VALUES (?, ?, ?, ?)");
-        if(!$stmt) { die("Prepare mislukt: " . $conn->error); }
-        $stmt->bind_param("iiid", $order_id, $key, $item['quantity'], $item['price']);
+    // Couponcode toepassen
+    if(isset($_POST['apply_coupon']) && !empty($coupon_code)) {
+        $stmt = $conn->prepare("SELECT * FROM coupons WHERE code = ? AND is_active = 1 LIMIT 1");
+        $stmt->bind_param("s", $coupon_code);
         $stmt->execute();
+        $result = $stmt->get_result();
+        if($result->num_rows === 1) {
+            $coupon = $result->fetch_assoc();
+            $coupon_id = $coupon['coupon_id'];
+            $discount = ($total_price * $coupon['discount_percentage']) / 100;
+            $discounted_total = max(0, $total_price - $discount);
+        } else {
+            $coupon_error = "Ongeldige of niet-actieve couponcode.";
+            $discounted_total = $total_price;
+        }
         $stmt->close();
     }
 
-    // Leeg winkelwagen
-    unset($_SESSION['cart']);
+    // Bestelling plaatsen
+    if(isset($_POST['submit_order'])) {
 
-    // Flag voor modal
-    $orderPlaced = true;
+        $stmt = $conn->prepare("INSERT INTO orders (user_id, email, firstname, lastname, address, housenumber, zipcode, city, phone, payment_method, total_price, discount_amount, coupon_id, status, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'In behandeling', NOW())");
+        if(!$stmt) { die("Prepare mislukt: " . $conn->error); }
+        $stmt->bind_param("isssssssssdii", $user_id, $email, $firstname, $lastname, $address, $housenumber, $zipcode, $city, $phone, $payment_method, $discounted_total, $discount, $coupon_id);
+        $stmt->execute();
+        $order_id = $stmt->insert_id;
+        $stmt->close();
+
+        // Voeg orderlines toe
+        foreach($_SESSION['cart'] as $key => $item) {
+            if($key === 'total_items') continue;
+            $stmt = $conn->prepare("INSERT INTO orderlines (order_id, product_id, quantity, price) VALUES (?, ?, ?, ?)");
+            if(!$stmt) { die("Prepare mislukt: " . $conn->error); }
+            $stmt->bind_param("iiid", $order_id, $key, $item['quantity'], $item['price']);
+            $stmt->execute();
+            $stmt->close();
+        }
+
+        // Leeg winkelwagen
+        unset($_SESSION['cart']);
+        $orderPlaced = true;
+    }
 }
 ?>
 
@@ -79,11 +104,12 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION['cart']) && !empty($
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Checkout</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../css/checkout.css">
 <?php include("header.php"); ?>
 </head>
 <body>
 
-<div class="container my-5">
+<div class="container my-5 checkout-container">
 <h1 class="mb-4">Checkout</h1>
 
 <?php if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])): ?>
@@ -91,7 +117,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION['cart']) && !empty($
 <!-- Winkelwagen overzicht -->
 <div class="mb-4">
     <h4>Je bestelling</h4>
-    <table class="table table-bordered">
+    <table class="table table-bordered align-middle checkout-table">
         <thead class="table-light">
             <tr>
                 <th>Product</th>
@@ -119,12 +145,23 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION['cart']) && !empty($
             <td colspan="3" class="text-end fw-bold">Totaal:</td>
             <td class="fw-bold">€<?php echo number_format($total, 2); ?></td>
         </tr>
+        <?php if($discount > 0): ?>
+        <tr>
+            <td colspan="3" class="text-end fw-bold">Korting (<?php echo $coupon['code']; ?>):</td>
+            <td class="fw-bold">-€<?php echo number_format($discount, 2); ?></td>
+        </tr>
+        <tr>
+            <td colspan="3" class="text-end fw-bold">Totaal na korting:</td>
+            <td class="fw-bold">€<?php echo number_format($discounted_total, 2); ?></td>
+        </tr>
+        <?php endif; ?>
         </tbody>
     </table>
 </div>
 
 <!-- Checkout formulier -->
 <form method="post">
+
     <div class="row mb-3">
         <div class="col-md-6">
             <label for="firstname" class="form-label">Voornaam</label>
@@ -177,11 +214,21 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION['cart']) && !empty($
         </select>
     </div>
 
-    <button type="submit" class="btn btn-success">Bestelling plaatsen</button>
+    <!-- Coupon -->
+    <div class="mb-3 coupon-group">
+        <input type="text" name="coupon_code" class="form-control" placeholder="Couponcode" value="<?php echo isset($_POST['coupon_code']) ? htmlspecialchars($_POST['coupon_code']) : ''; ?>">
+        <button type="submit" name="apply_coupon" class="btn btn-warning">Gebruik coupon</button>
+    </div>
+
+    <?php if(!empty($coupon_error)): ?>
+    <div class="alert alert-danger"><?php echo $coupon_error; ?></div>
+    <?php endif; ?>
+
+    <button type="submit" name="submit_order" class="btn btn-gold mt-3">Bestelling plaatsen</button>
 </form>
 
 <?php else: ?>
-<p>Je winkelwagen is leeg.</p>
+<p class="empty-cart">Je winkelwagen is leeg.</p>
 <a href="shop.php" class="btn btn-primary">Ga terug naar shoppen</a>
 <?php endif; ?>
 
