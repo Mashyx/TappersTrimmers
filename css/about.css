@@ -1,94 +1,112 @@
-#body{
-    background-color: #111;
+/* Algemene body styling */
+body#body {
+    background-color: #1a1a1a !important;
+    color: #eee !important;
+    font-family: 'Poppins', sans-serif !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
-.txt{
-    color: white;
+/* Container */
+.about-container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 40px 20px !important;
 }
 
-.over-ons{
-    margin-bottom: 60px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
-
-}
-#title-ons{
-    font-weight:lighter;
-    color: #bfa046;
-    
-}
-#kappers-intro{
-    font-weight:lighter;
-    color: #bfa046;
-}
-.box_overOns{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content:center;
-    margin-bottom: 80px;
-}
-.over-ons-imgs{
-    height: 300px; 
-    width:700PX;
+/* Secties */
+.over-ons, .kappers, .over-ons-images {
+    margin-bottom: 50px !important;
 }
 
-
-/*barber imges*/
-#barber1{
-    width: 250px;
-    height: 350px;
-    margin-right: 15px;
-}
-#barber2{
-    width: 250px;
-    height: 350px;
-    margin-left: 15px;
-}
-#barber3{
-    width: 250px;
-    height: 350px;
-    margin-left: 15px;
+/* Titels */
+.section-title {
+    font-size: 2.5rem !important;
+    color: #bfa046 !important;
+    text-align: center !important;
+    margin-bottom: 20px !important;
 }
 
-#knipImg{
-    width: 500px;
-    height: 350px;
-    margin-right: 15px;   
-}
-#alceholImg{
-    width: 500px;
-    height: 350px;
-    margin-left: 15px;
+/* Tekst */
+.section-text {
+    font-size: 1.1rem !important;
+    color: #ddd !important;
+    text-align: center !important;
+    line-height: 1.6 !important;
 }
 
-
-.onze-kappers{
-    display: flex;
-    justify-content: auto;
-    align-items: auto;
-    padding: 40px;
-    margin-left: 200px;
-    margin-right: 200px;
-    
-
-    
+/* Over ons afbeeldingen */
+.over-ons-images {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 20px !important;
+    flex-wrap: wrap !important;
 }
-.img-barbers{
-    margin-right: 50px;
-}
-.div-barbers{
-    text-align: center;
-    margin-bottom: 60px; 
-    
 
-
+.over-ons-img {
+    width: 100% !important;
+    max-width: 500px !important;
+    border-radius: 12px !important;
+    border: 2px solid #bfa046 !important;
+    box-shadow: 0 4px 15px rgba(191,160,70,0.3) !important;
 }
-#quote{
-    color: #bfa046;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 60px;
-    margin-top: 60px;
-    
+
+/* Kappers sectie */
+.kappers {
+    display: flex !important;
+    justify-content: space-around !important;
+    gap: 30px !important;
+    flex-wrap: wrap !important;
+}
+
+.barber-card {
+    background-color: #111 !important;
+    border: 1px solid #bfa046 !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    text-align: center !important;
+    max-width: 300px !important;
+    box-shadow: 0 0 15px rgba(191,160,70,0.2) !important;
+}
+
+.barber-img {
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: contain !important;
+    border-radius: 8px !important;
+    margin-bottom: 10px !important;
+}
+
+.barber-name {
+    font-size: 1.4rem !important;
+    color: #bfa046 !important;
+    margin-bottom: 8px !important;
+}
+
+.barber-text {
+    font-size: 1rem !important;
+    color: #ddd !important;
+    line-height: 1.4 !important;
+}
+
+/* Quote */
+.quote {
+    text-align: center !important;
+    font-size: 2rem !important;
+    color: #bfa046 !important;
+    margin-top: 40px !important;
+    font-style: italic !important;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .kappers {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .over-ons-images {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
 }
