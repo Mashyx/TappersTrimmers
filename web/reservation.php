@@ -4,28 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-      <?php
+    <link rel="stylesheet" href="../css/reserveren.css">
+    <?php
     include("header.php");
     include("../PHP/db.php");
     ?>
 </head>
-<body>
-    <form method="post">
+<body class="body_reserveren">
+    <br>
+    <h1 element class="h1_reserveren">Maak een reservering</h1>
+    <form method="post" class="form_reserveren">
     <label for="res_date">Kies een datum:</label>
     <input type="date" id="res_date" name="res_date">
     <label for="res_time">Kies een tijd:</label>
     <input type="time" id="res_time" name="res_time" min="09:00" max="18:00" step="900">
+    <label for ="res_naam">Uw naam:</label>
     <input type="text" id="res_naam" name="res_naam" placeholder="Uw naam">
+    <label for ="res_mail">Uw e-mail:</label>
     <input type="email" id="res_mail" name="res_mail" placeholder="Uw e-mail">
+    <label for="kapper">Kies een kapper:</label>
     <select name="kapper" id="kapper"> 
         <option value="Kapper 1" id="kapper">Divar Harms</option> 
         <option value="Kapper 2" id="kapper">Claudia Bakker</option> 
         <option value="Kapper 3" id="kapper">Nieck Groot</option>
     </select>
-
+<br>
     <button type="submit" value="reserveren">Reserveer</button>
 </form>
-  
+
+  <br>
     <?php
     ini_set('display_errors', 1); 
 ini_set('display_startup_errors', 1); 
