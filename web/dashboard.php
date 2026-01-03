@@ -28,9 +28,10 @@ $displayName = isset($_SESSION['first_name']) ? htmlspecialchars($_SESSION['firs
     <h2>Welkom<?php if ($displayName) echo ', ' . $displayName; ?>!</h2>
     <p>Dit is je dashboard.</p>
 
-    <form action="homepage.php" method="get" style="margin-top:18px;">
+    <form action="../PHP/logout.php" method="post" style="margin-top:18px;">
         <button type="submit" class="btn-logout">Uitloggen</button>
-    </form>
+</form>
+
 
 </div>
 

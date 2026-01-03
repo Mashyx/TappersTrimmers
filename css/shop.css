@@ -1,0 +1,86 @@
+/* Basis reset en font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #000 !important;
+    color: #fff;
+}
+
+/* Titels */
+h1, h2 {
+    color: #bfa046 !important;
+    text-align: center;
+}
+
+h2 {
+    text-transform: capitalize;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* Kaarten */
+.card {
+    background-color: #111 !important;
+    border: 1px solid #bfa046 !important; 
+    border-radius: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(191,160,70,0.4);
+}
+
+.card-img-top {
+    height: 220px;
+    object-fit: contain;
+    border-bottom: 1px solid #bfa046;
+    background-color: white !important;
+}
+
+.card-title {
+    color: #bfa046 !important;
+    font-weight: 600;
+}
+
+.card-text {
+    color: #ddd;
+}
+
+/* Knoppen */
+.btn-success {
+    background-color: #bfa046 !important;
+    border-color: #bfa046;
+    font-weight: 600;
+}
+
+.btn-success:hover {
+    background-color: #d4b768;
+    border-color: #d4b768;
+}
+
+/* Input groep */
+.input-group input {
+    background-color: #222;
+    border: 1px solid #555;
+    color: #fff;
+}
+
+.input-group input:focus {
+    border-color: #bfa046;
+    box-shadow: 0 0 8px rgba(191,160,70,0.4);
+    color: #fff;
+}
+
+
+@media (max-width: 576px) {
+    .row.g-4 {
+        row-gap: 1.5rem;
+        column-gap: 1.5rem;
+    }
+}

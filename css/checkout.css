@@ -1,0 +1,141 @@
+/* Algemene body stijl */
+body {
+    background-color: #1a1a1a !important;
+    color: #bfa046 !important;
+    font-family: "Poppins", sans-serif !important;
+}
+
+/* Container / card stijl */
+.checkout-container {
+    background: #111 !important;
+    border: 1px solid #bfa046 !important;
+    padding: 35px !important;
+    border-radius: 12px !important;
+    box-shadow: 0 0 15px rgba(191,160,70,0.2) !important;
+}
+
+/* Form labels */
+.form-label {
+    color: #ddd !important;
+    font-weight: 500 !important;
+}
+
+/* Form controls */
+.form-control {
+    background-color: #222 !important;
+    border: 1px solid #555 !important;
+    color: #fff !important;
+    padding: 10px !important;
+    caret-color: #bfa046 !important;
+}
+
+.form-control:focus {
+    border-color: #bfa046 !important;
+    box-shadow: 0 0 8px rgba(191,160,70,0.4) !important;
+    color: #fff !important;
+}
+
+/* Select inputs */
+.form-select {
+    background-color: #222 !important;
+    border: 1px solid #555 !important;
+    color: #fff !important;
+}
+
+.form-select:focus {
+    border-color: #bfa046 !important;
+    box-shadow: 0 0 8px rgba(191,160,70,0.4) !important;
+    color: #fff !important;
+}
+
+/* Knoppen */
+.btn-gold {
+    background: #bfa046 !important;
+    color: #111 !important;
+    font-weight: 600 !important;
+    border: none !important;
+    padding: 10px 16px !important;
+    border-radius: 6px !important;
+    width: 100% !important;
+}
+
+.btn-gold:hover {
+    background: #d4b768 !important;
+}
+
+/* Coupon input + button */
+.coupon-group {
+    display: flex !important;
+    gap: 10px !important;
+}
+
+.coupon-group input[type="text"] {
+    flex: 1 !important;
+    padding: 10px !important;
+    font-size: 1rem !important;
+}
+
+.coupon-group button {
+    padding: 10px 16px !important;
+    font-size: 1rem !important;
+    flex: none !important;
+    background-color: #bfa046 !important;
+}
+
+/* Tabel checkout */
+.checkout-table {
+    background-color: #111 !important;
+    color: #eee !important;
+    border-color: #fff !important;
+}
+
+.checkout-table th {
+    background-color: #111 !important;
+    color: #bfa046 !important;
+    border-color: #fff !important;
+}
+
+.checkout-table td {
+    background-color: #111 !important;
+    color: #eee !important;
+}
+
+.checkout-table .fw-bold {
+    color: #bfa046 !important;
+}
+
+/* Modal styling */
+.modal-content {
+    background-color: #111 !important;
+    color: #eee !important;
+    border: 1px solid #bfa046 !important;
+}
+
+.modal-header {
+    border-bottom: 1px solid #333 !important;
+}
+
+.modal-footer {
+    border-top: 1px solid #333 !important;
+}
+
+.modal-title {
+    color: #bfa046 !important;
+}
+
+/* Alerts */
+.alert-danger {
+    background-color: #330000 !important;
+    color: #ff9999 !important;
+    border-color: #bfa046 !important;
+}
+
+/* Responsive spacing */
+@media (max-width: 768px) {
+    .coupon-group {
+        flex-direction: column !important;
+    }
+    .coupon-group button {
+        width: 100% !important;
+    }
+}
