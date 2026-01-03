@@ -1,8 +1,13 @@
 <?php
-session_start();
+if (!isset($_SESSION)) {
+    session_start();
+}
 $isLoggedIn = isset($_SESSION['user_id']);
 $loginHref = $isLoggedIn ? 'dashboard.php' : 'register.php';
-
+$total_cart_items = 0;
+if (isset($_SESSION['cart']) && isset($_SESSION['cart']["total_items"])) {
+    $total_cart_items = $_SESSION['cart']["total_items"];
+}
 ?>
 
 <header>
@@ -25,7 +30,7 @@ $loginHref = $isLoggedIn ? 'dashboard.php' : 'register.php';
                 <a href="cart.php" class="nav-link p-0 me-2">
                     <button class="cart-btn" id="cartBtn">
                         <i class="bi bi-cart"></i>
-                        <span id="cartCount">0</span>
+                        <span id="cartCount"><?php echo $total_cart_items; ?></span>
                     </button>
                 </a>
                 <a href="<?php echo $loginHref; ?>" class="nav-link p-0 me-2">
