@@ -54,7 +54,7 @@
             <h3 class="barber-name">Nieck Groot</h3>
             <p class="barber-text">
                 Leeftijd: 45 jaar<br>
-                Kapper sinds 2 jaar, werkt nu 4 jaar bij ons.<br>
+                Kapper sinds 4 jaar, werkt nu 2 jaar bij ons.<br>
                 Specialisatie: kinderen.<br>
                 Werkdagen: donderdag, vrijdag, zaterdag
             </p>
