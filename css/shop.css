@@ -55,13 +55,13 @@ h2 {
 /* Knoppen */
 .btn-success {
     background-color: #bfa046 !important;
-    border-color: #bfa046;
+    border-color: #bfa046 !important;
     font-weight: 600;
 }
 
 .btn-success:hover {
     background-color: #d4b768;
-    border-color: #d4b768;
+    border-color: #d4b768 !important;
 }
 
 /* Input groep */
