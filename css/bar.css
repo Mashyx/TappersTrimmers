@@ -1,0 +1,22 @@
+.body{
+    background-color: #111;
+}
+
+
+.txt{
+    color: #bfa046;
+
+}
+.txt_w{
+    color: white;
+
+}
+
+#menu_kaart{
+    display: flex;
+    justify-content: space-between;
+    border: solid 2px #bfa046;
+}
+#frisdranken, #wijnen, #bieren, #cocktails{
+    border: solid 2px #bfa046;
+}
