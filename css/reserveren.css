@@ -49,6 +49,6 @@ button:hover {
 
 .h1_reserveren {
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: #bfa046 !important;
     font-family: 'Courier New', Courier, monospace;
 }
