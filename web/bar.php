@@ -11,8 +11,6 @@
     ?>
 </head>
 <body class="body">
-    <div id="test"><h1>test</h1></div>
-
     <div id="bar_mainIMG" class="mainIMG">
      <img src="../assets/alcehol_img3.jpeg" height="20%" width="80%"  id="aldceholIMG" >
     </div>
