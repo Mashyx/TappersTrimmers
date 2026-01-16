@@ -15,7 +15,7 @@
      <img src="../assets/alcehol_img3.jpeg" height="20%" width="80%"  id="aldceholIMG" >
     </div>
 
-    <h1 class="txt" class='h1'>dranken</h1>
+    <h1 class="txt" class='h1'>Dranken</h1>
     <p class="txt_w">Op vrijdag is er een speciaal aanbieding! van 16:00 tot 18:00 is er happy hour. 
     Tijdens happy hour zijn alle frisdranken en bieren voor de helft van de prijs! Kom dus snel langs 
     en geniet van onze heerlijke dranken tegen een gereduceerde prijs!

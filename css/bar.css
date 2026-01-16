@@ -20,3 +20,10 @@
 #frisdranken, #wijnen, #bieren, #cocktails{
     border: solid 2px #bfa046;
 }
+#bar_mainIMG{
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    }
