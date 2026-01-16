@@ -18,7 +18,7 @@ if (isset($_SESSION['cart']) && isset($_SESSION['cart']["total_items"])) {
 <nav class="navbar navbar-expand-lg custom-navbar">
   <div class="container-fluid">
     <a class="navbar-brand d-flex align-items-center" href="homepage.php">
-      <img src="../assets/logodesign.png" alt="logo" class="logo me-2"/>
+      <img src="../assets/nieuwlogotnt.png" alt="logo" class="logo me-2"/>
     <p class="title">Tappers & Trimmers</p> 
     </a>
      <ul class="nav-links navbar-nav ms-auto" id="navLinks">

@@ -20,7 +20,7 @@
 
         <div class="hero-right">
             <div class="logo-wrap">
-                <img src="../assets/logodesign.png" alt="Tappers & Trimmers logo" class="logo-img">
+                <img src="../assets/nieuwlogotnt.png" alt="Tappers & Trimmers logo" class="logo-img">
             </div>
         </div>
     </div>
