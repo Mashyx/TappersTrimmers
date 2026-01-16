@@ -24,7 +24,7 @@
       <div id="dranken" class="txt">
 
     <div id= "frisdranken">
-        <h1 class="txt_w">Frisdranken €3,20</h1>
+        <h2 class="txt_w">Frisdranken €3,20</h2>
         <h2>Cola</h2>
         <p class="txt_w">Een cola van 0,40ml</p>
 
@@ -40,7 +40,7 @@
             
 
     <div id="wijnen">
-        <h1 class="txt_w">Wijen €4,50</h1>
+        <h2 class="txt_w">Wijnen €4,50</h2>
         <h2>Rode wijn</h2>
         <p  class="txt_w">Een glas rode wijn van 0,25ml</p>
 
@@ -78,12 +78,12 @@
     </div>
 
     <div id="mocktails">
-        <h2 class="txt_w">mocktails €6,00</h2>
-            <h2>virgin on the beach</h2>
+        <h2 class="txt_w">Mocktails €6,00</h2>
+            <h2>Virgin on the beach</h2>
             <p class="txt_w">Een alcoholvrije versie van de klassieke sex on the beach cocktail</p>
-            <h2>no-jito</h2>
+            <h2>No-jito</h2>
             <p class="txt_w">Een alcoholvrije versie van de klassieke mojito cocktail</p>
-            <h2>piña colada virgin</h2>
+            <h2>Piña colada virgin</h2>
             <p class="txt_w">Een alcoholvrije versie van de klassieke piña colada cocktail</p>
 
     </div>
