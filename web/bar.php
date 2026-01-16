@@ -41,7 +41,7 @@
 
     <div id="wijnen">
         <h1 class="txt_w">Wijen</h1>
-        <h2>rode wijn €4,50</h2>
+        <h2>Rode wijn €4,50</h2>
         <p  class="txt_w">Een glas rode wijn van 0,25ml</p>
 
         <h2>Witte wijn €4,50</h2>
