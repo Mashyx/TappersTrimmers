@@ -15,6 +15,8 @@ body {
 h1, h2 {
     color: #bfa046 !important;
     text-align: center;
+    font-size: 5rem !important;
+    
 }
 
 h2 {

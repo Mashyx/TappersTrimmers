@@ -15,8 +15,8 @@ include("header.php");
 <body>
 
 <div class="container my-5">
-    <h1>Onze Producten</h1>
-
+    <h1>Onze Producten:</h1>
+<br>
     <?php
     // Haal alle producten op, gesorteerd op categorie
     $sql = "SELECT * FROM products ORDER BY category ASC, name ASC";
