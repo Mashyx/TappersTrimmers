@@ -16,7 +16,7 @@
             </div>
 
             <div class="col-md-3 mb-3">
-                <h5>Openingstijden Barber</h5>
+                <h5>Openingstijden Trimmers</h5>
                 <p>
                     Maandag: <span class="closed">Gesloten</span><br>
                     Dinsdag: 09:00 - 18:00<br>
@@ -30,7 +30,7 @@
             </div>
 
             <div class="col-md-3 mb-3">
-                <h5>Openingstijden Bar</h5>
+                <h5>Openingstijden Tappers</h5>
                 <p>
                     Maandag: <span class="closed">Gesloten</span><br>
                     Dinsdag: 12:00 - 20:00<br>
