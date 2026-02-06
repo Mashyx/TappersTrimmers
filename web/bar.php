@@ -100,10 +100,10 @@
         <h2>Gefrituur garnalen €9,50</h2>
             <p class="txt_w">Gefrituurde garnalen met een citroen- en knoflooksaus</p>
 
-        <h2>Bitter ballen € 8,95 / € 16,75</h2>
+        <h2>Bitterballen € 8,95 / € 16,75</h2>
             <p class="txt_w">Bitterballen van 10 stuks of 20 stuks</p>
         
-        <h2>Friet met mayonese €4,20</h2>
+        <h2>Friet met mayonaise €4,20</h2>
             <p class="txt_w">Een medium friet met mayonese</p>
     </div>
       </div>
